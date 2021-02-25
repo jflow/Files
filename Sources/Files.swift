@@ -928,7 +928,7 @@ public extension Folder {
     }
     
     static var applicationSupport: Folder? {
-        return try? self.library?.subfolder(at: "Application Directory")
+        return try? .matching(.applicationSupportDirectory)
     }
 }
 #endif
