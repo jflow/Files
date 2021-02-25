@@ -926,6 +926,10 @@ public extension Folder {
     static var library: Folder? {
         return try? .matching(.libraryDirectory)
     }
+    
+    static var applicationSupport: Folder? {
+        return try? self.library?.subfolder(at: "Application Directory")
+    }
 }
 #endif
 
